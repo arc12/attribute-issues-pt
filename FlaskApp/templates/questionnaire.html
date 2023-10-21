@@ -1,0 +1,21 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+<h1>{{ title }}</h1>
+<p>{{ attribute_scope }}</p>
+<p><strong>{{ key_question }}</strong></p>
+<div class="top-pad">
+    <form action="{{ post_url }}" method="POST">
+    {% for attr in attributes %}
+        <div class="card mb-2">
+            <div class="card-body">
+                <h3>{{ attr["label"] }} <input type="checkbox" name="{{ attr['code'] }}" class="check-cross"/></h3>
+                <p>{{ attr["summary"] }}</p>
+                
+            </div>
+        </div>
+    {% endfor %}
+    <button type="submit">{{ langstrings.get("FORM_SUBMIT") }}</button>
+    </form>
+</div>
+{% endblock %}
