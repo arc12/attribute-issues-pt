@@ -13,7 +13,8 @@ class Langstrings(LangstringsBase):
             "en": "Questionnaire"
         },
         "FORM_SUBMIT": {"en": "Submit"},
-        "FORM_ACK": {"en": "Your submission has been recorded."}
+        "FORM_ACK": {"en": "Your submission has been recorded."},
+        "EXPLANATION_RUBRIC": {"en": "Orange boxes indicate where your response did not match the recommended category."}
     }
 
 # The menu is only shown if menu=1 in query-string AND only for specific views. Generally make the menu contain all views it is coded for

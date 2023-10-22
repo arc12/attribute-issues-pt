@@ -18,7 +18,7 @@ The structure of the "detail" container comprises:
 - attribute_scope [simple text]: Explains what kind of entity the attributes concern and outlines the process in which they are being used.
 - key_question [simple text]: The headline question for the questionnaire, typically asking which attributes should NOT be used for a specified purpose.,
 - issue_categories [a list of key-value structures]: Summarises the types of issue which might be assigned to an attribute. These should be ordered with the most important category first.
-  - The structures take the form: {"code": "", "label": "", "summary": ""}. The __code__ is used internally and for logging and should not be changed once the plaything specification is in use. The __label__ is presented to users and may be changed without affecting the analysis of logged data (as it uses the code). The __summary__ element is optional; see below.
+  - The structures take the form: {"code": "", "label": "", "summary": ""}. The __code__ is used internally and for logging and should not be changed once the plaything specification is in use. The __label__ is presented to users and may be changed without affecting the analysis of logged data (as it uses the code). The __summary__ element is optional; see below. There SHOULD be an entry with __code__ set to "" and with a suitable label for the no-category case, for example "No Issues"; this is used in the explanation provided following a questionnaire submission. This should be the last category in the list.
 - response_type [simple text]: Determines what happens when the respondant submits their questionnaire responses. Valid values are "acknowledge" (provides no feedback) and "explain", which lists the responses and comments on the category assigned to each. Defaults to "explain".
 
 ### "asset_map"
@@ -38,3 +38,6 @@ The plaything is designed to accommodate a range of scenarios according to the a
 
 ### Suggestions
 It is recommended to phrase the __key_question__ such that respondants identify problematical attributes, i.e. attributes which belong to at least one of the issue categories. The alternative would imply that the respondant should select useful attributes, which is something that can often only be determined by statistical analysis; the question would be asking respondants to guess!
+
+# TODOs (Development)
+Support two modes of response: a) checkbox for "there is an issue" (as now), and b) selector dropdown for category.

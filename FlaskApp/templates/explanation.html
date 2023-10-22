@@ -1,0 +1,27 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+<h1>{{ title }}</h1>
+<p><strong>{{ key_question }}</strong></p>
+<p><em>{{ langstrings.get("EXPLANATION_RUBRIC") }}</em></p>
+    {% for section in explanation %}
+    <div class="pb-2 pt-2">
+        <h2>{{ section["heading"] }}</h2>
+        <p>{{ section["summary"] }}</p>
+        {% for attr in section["attributes"] %}
+        <div class="card mt-2  {{ "bg-warning" if attr["wrong"] else "" }}">
+            <div class="card-body">
+                <h3>{{ attr["label"] }} <input type="checkbox" {{ "checked" if attr["selected"] else "" }} disabled="true" class="check-cross"/></h3>
+                <div>{{ attr["summary"] }}</div>
+                <div><em>{{ attr["explanation"] }}</em></div>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+<div class="text-end">
+    {% if next_url %}
+        <a class="h2 link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="{{ next_url }}">Next ></a>
+    {% endif %}
+</div>
+{% endblock %}
