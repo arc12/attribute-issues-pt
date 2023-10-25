@@ -7,7 +7,7 @@
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "FlaskApp",
+                "FLASK_APP": "AttributeIssuesFlask",
                 "FLASK_DEBUG": "1"
             },
             "args": [

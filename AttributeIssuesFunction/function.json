@@ -10,7 +10,7 @@
         "get",
         "post"
       ],
-      "route": "{*route}"
+      "route": "attribute-issues/{*route}"
     },
     {
       "type": "http",
