@@ -1,17 +1,15 @@
 # Attribute Issues Plaything
 _This documents the configuration files which allow the Plaything to be customised and notes how they relate to various useage scenarios._
 
-## Plaything Specification
-The collection of configuration files is referred to a __specification__ for how the plaything should be realised. The starting point for the specification is a JSON file inside the plaything configuration folder. For the Attribute Issues Plaything, the folder path is Config/attribute-issues-pt. The __specification id__ is the file-name less the ".json" extension and this file is generically called the "specification core file".
+Plaything name: attribute-issues
 
-The specification core file contains the following elements which are common to all playthings:
-- enabled
-- title
-- summary
-- lang
-- detail = a container for plaything-specific specification
-- menu, for which the valid values are "about" and "questionnaire"
-- asset_map, for which the valid keys are "about" and "attributes"
+## Plaything Specification
+Refer to the README in the pg_shared repository/folder for common elements; this README refers only to the elements which are specific to the Attribute Issues Plaything.
+For the Attribute Issues Plaything, the Specifications folder is Config/attribute-issues.
+
+Available views:
+- "about" - available if there is an entry for "about" in the asset_map.
+- "questionnaire"
 
 ### "detail"
 The structure of the "detail" container comprises:
