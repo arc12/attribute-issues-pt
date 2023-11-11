@@ -37,5 +37,5 @@ The plaything is designed to accommodate a range of scenarios according to the a
 ### Suggestions
 It is recommended to phrase the __key_question__ such that respondants identify problematical attributes, i.e. attributes which belong to at least one of the issue categories. The alternative would imply that the respondant should select useful attributes, which is something that can often only be determined by statistical analysis; the question would be asking respondants to guess!
 
-# TODOs (Development)
+## TODOs (Development)
 Support two modes of response: a) checkbox for "there is an issue" (as now), and b) selector dropdown for category.
